@@ -11,7 +11,7 @@ Lists all PlusWP products with information about the compatibility of each produ
 == Description ==
 For a quick video demo please view the [youtube screencast]().
 
-[Follow us on twitter!](https://twitter.com/pluswp)
+[Follow us on twitter!](https://twitter.com/plus_wp)
 
 = What does this plugin do? =
 
