@@ -50,7 +50,7 @@ final class PWP_Check {
 			'uri' => 'http://pluswp.com/customize-plus/',
 			'type' => 'plugin',
 			'min_php_version' => '5.2.4',
-			'min_wp_version' => '4.1.1',
+			'min_wp_version' => '4.3.0',
 			'incompatible_plugins' => array(
 				array(
 					'title' => 'Kirki Framework',
@@ -63,16 +63,12 @@ final class PWP_Check {
 			'uri' => 'http://pluswp.com/customize-plus-premium/',
 			'type' => 'plugin',
 			'min_php_version' => '5.2.4',
-			'min_wp_version' => '4.1.1',
+			'min_wp_version' => '4.3.0',
 			'upload_dir_writable' => true,
 			'incompatible_plugins' => array(
 				array(
 					'title' => 'Kirki Framework',
 					'file' => 'kirki/kirki.php',
-				),
-				array(
-					'title' => 'Akismet',
-					'file' => 'akismet/akismet.php',
 				),
 			),
 		),
@@ -81,7 +77,7 @@ final class PWP_Check {
 			'uri' => 'http://pluswp.com/plus-bootstrap/',
 			'type' => 'theme',
 			'min_php_version' => '5.2.4',
-			'min_wp_version' => '4.1.1',
+			'min_wp_version' => '4.3.0',
 			'incompatible_plugins' => array(
 				array(
 					'title' => 'Kirki Framework',
