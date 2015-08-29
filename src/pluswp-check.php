@@ -42,7 +42,7 @@ final class PWP_Check {
 	 * Minimum php version supported
 	 *
 	 * @since 0.0.1
-	 * @var string
+	 * @var array
 	 */
 	public static $to_check = array(
 		'customize-plus' => array(
@@ -94,9 +94,9 @@ final class PWP_Check {
 	 */
 	public function __construct() {
 		// Translate plugin meta
-		__( 'pkgNamePretty', 'pkgTextDomain', 'pluswp-check-i18n' );
-		__( 'pkgAuthorName', 'pkgTextDomain', 'pluswp-check-i18n' );
-		__( 'pkgDescription', 'pkgTextDomain', 'pluswp-check-i18n' );
+		__( 'pkgNamePretty' );
+		__( 'pkgAuthorName' );
+		__( 'pkgDescription' );
 
 		if ( is_admin() ) {
 			add_action( 'admin_notices', array( __CLASS__, 'show_notice' ) );
@@ -136,7 +136,7 @@ final class PWP_Check {
 		// Check plugin
 		if ( $file === plugin_basename( PWPch_PLUGIN_FILE ) ) {
 			unset( $links[2] );
-			$links[] = '<a href="http://pluswp.com/check/" target="_blank">' . __( 'Project homepage', 'pkgTextdomain', 'pluswp-check-i18n' ) . '</a>';
+			$links[] = '<a href="http://pluswp.com/check/" target="_blank">' . __( 'Project homepage' ) . '</a>';
 		}
 		return $links;
 	}
@@ -160,38 +160,27 @@ final class PWP_Check {
 	}
 
 	/**
-	 * Check PHP version
+	 * Check version (php, WordPress)
 	 *
-	 * @param  string $min_php_version Minimum supported Php version
-	 * @since 0.0.1
+	 * @since  0.0.1
+	 * @param  string $min_version Minimum supported version
+	 * @param  string $of 				 Either `'php'` or '`wp'`.
+	 * @return string|boolean
 	 */
-	public static function check_php( $min_php_version = '' ) {
-		$current_php_version = phpversion();
-		load_plugin_textdomain( 'pkgTextDomain', false, dirname( plugin_basename( PWPch_PLUGIN_FILE ) ), '/languages/' );
-
-		// PHP version is too low
-		if ( version_compare( $min_php_version, $current_php_version, '>' ) ) {
-			return sprintf( __( 'PHP version %1$s is too low, %2$s is required.', 'pkgTextdomain', 'pluswp-check-i18n' ),
-				$current_php_version, $min_php_version );
+	public static function check_version( $min_version = '', $of = 'php' ) {
+		if ( $of === 'php' ) {
+			$current_version = phpversion();
+			$error_msg = sprintf( __( 'PHP version %1$s is too low, %2$s is required.' ), $current_version, $min_php_version );
 		} else {
-			return false;
+			$current_version = get_bloginfo( 'version' );
+			$error_msg = sprintf( __( 'WordPress version %1$s currently installed is too low, %2$s is required.' ), $current_version, $min_php_version );
 		}
-	}
 
-	/**
-	 * Check WordPress version
-	 *
-	 * @param  string $min_wp_version Minimum supported WordPress version
-	 * @since 0.0.1
-	 */
-	public static function check_wp( $min_wp_version = '' ) {
-		$current_wp_version = get_bloginfo( 'version' );
 		load_plugin_textdomain( 'pkgTextDomain', false, dirname( plugin_basename( PWPch_PLUGIN_FILE ) ), '/languages/' );
 
 		// WordPress version is too low
-		if ( version_compare( $min_wp_version, $current_wp_version, '>' ) ) {
-			return sprintf( __( 'WordPress version %1$s currently installed is too low, %2$s is required.', 'pkgTextdomain', 'pluswp-check-i18n' ),
-				$current_wp_version, $min_wp_version );
+		if ( version_compare( $min_version, $current_version, '>' ) ) {
+			return $error_msg;
 		} else {
 			return false;
 		}
@@ -200,13 +189,14 @@ final class PWP_Check {
 	/**
 	 * Check plugin incompatibilities
 	 *
-	 * @param array $incompatible_plugins A list of incompatible plugins
-	 * @since 0.0.1
+	 * @since  0.0.1
+	 * @param  array $incompatible_plugins A list of incompatible plugins
+	 * @return array
 	 */
 	public static function check_incompatible_plugins( $incompatible_plugins = array() ) {
 		$messages = array();
 
-		if ( $incompatible_plugins && is_array( $incompatible_plugins ) ) {
+		if ( is_array( $incompatible_plugins ) && ! empty( $incompatible_plugins ) ) {
 			foreach ( $incompatible_plugins as $plugin ) {
 				$msg = self::is_plugin_installed( $plugin['file'], $plugin['title'] );
 				if ( $msg ) {
@@ -222,7 +212,7 @@ final class PWP_Check {
 	/**
 	 * Is plugin installed
 	 *
-	 * @since 0.0.1
+	 * @since  0.0.1
 	 * @param  string  $probable_file  Probable file name of the plugin to search.
 	 * @param  string  $probable_title Probable title of the plugin to search for.
 	 * @return string|false False if the plugin is not present, an error message
@@ -231,11 +221,11 @@ final class PWP_Check {
 	public static function is_plugin_installed( $probable_file, $probable_title ) {
 		$msg_active = array(
 			'type' => 'error',
-			'text' => sprintf( __( 'The plugin %s (currently active) is not compatible.', 'pkgTextdomain', 'pluswp-check-i18n' ), '<b>' . $probable_title . '</b>' ),
+			'text' => sprintf( __( 'The plugin %s (currently active) is not compatible.' ), '<b>' . $probable_title . '</b>' ),
 		);
 		$msg_inactive = array(
 			'type' => 'warning',
-			'text' => sprintf( __( 'The plugin %s, which is currently inactive, is not compatible.', 'pkgTextdomain', 'pluswp-check-i18n' ), '<b>' . $probable_title . '</b>' ),
+			'text' => sprintf( __( 'The plugin %s, which is currently inactive, is not compatible.' ), '<b>' . $probable_title . '</b>' ),
 		);
 
 		// if the plugin is active
@@ -269,8 +259,8 @@ final class PWP_Check {
 		?>
 		<div class="updated pwpch">
 			<img src="<?php echo PWPch_PLUGIN_URL . 'logo.png'; ?>" alt="PlusWP logo" width="65" height="65">
-			<h2 class="pwpch-title"><?php esc_attr_e( sprintf( __( '%s report', 'pkgTextdomain', 'pluswp-check-i18n' ), 'PlusWP Check' ) ); ?></h2>
-			<h3 class="pwpch-desc"><?php esc_attr_e( sprintf( __( 'Listed here are all %s products with information about the compatibility of each product with your current WordPress and server configuration.', 'pkgTextdomain', 'pluswp-check-i18n' ), 'PlusWP' ) ); ?></h3>
+			<h2 class="pwpch-title"><?php esc_attr_e( sprintf( __( '%s report' ), 'PlusWP Check' ) ); ?></h2>
+			<h3 class="pwpch-desc"><?php esc_attr_e( sprintf( __( 'Listed here are all %s products with information about the compatibility of each product with your current WordPress and server configuration.' ), 'PlusWP' ) ); ?></h3>
 			<?php
 				global $context, $page, $s;
 				$plugin_file = 'pluswp-check/pluswp-check.php';
@@ -283,11 +273,11 @@ final class PWP_Check {
 					$icon_error = '<i class="dashicons dashicons-no"></i> ';
 					$icon_warning = '<i class="dashicons dashicons-marker warning"></i> ';
 
-					if ( $wp_error = self::check_wp( $args['min_wp_version'] ) ) {
+					if ( $wp_error = self::check_version( $args['min_wp_version'] ) ) {
 						$output_messages .= $icon_error . $wp_error;
 					}
 
-					if ( $php_error = self::check_php( $args['min_php_version'] ) ) {
+					if ( $php_error = self::check_version( $args['min_php_version'] ) ) {
 						$output_messages .= $icon_error . $php_error;
 					}
 
@@ -306,19 +296,19 @@ final class PWP_Check {
 					$upload_dir = wp_upload_dir()['basedir'];
 					if ( isset( $args['upload_dir_writable'] ) && $args['upload_dir_writable'] && ! wp_is_writable( $upload_dir ) ) {
 						$has_errors = true;
-						$output_messages .= '<p>' . $icon_error . sprintf( __( 'The filepath %s needs to be writable.', 'pkgTextdomain', 'pluswp-check-i18n' ), '<code>' . $upload_dir . '</code>' ) . '</p>';
+						$output_messages .= '<p>' . $icon_error . sprintf( __( 'The filepath %s needs to be writable.' ), '<code>' . $upload_dir . '</code>' ) . '</p>';
 					}
 
 					if ( $has_errors ) {
-						$result = array( 'icon' => 'no', 'text' => __( 'Not compatible', 'pkgTextdomain', 'pluswp-check-i18n' ) );
+						$result = array( 'icon' => 'no', 'text' => __( 'Not compatible' ) );
 					} else if ( $has_warnings ) {
-						$result = array( 'icon' => 'yes warning', 'text' => __( 'Compatible but be careful', 'pkgTextdomain', 'pluswp-check-i18n' ) );
+						$result = array( 'icon' => 'yes warning', 'text' => __( 'Compatible but be careful' ) );
 					} else {
-						$result = array( 'icon' => 'yes', 'text' => __( 'Fully compatible', 'pkgTextdomain', 'pluswp-check-i18n' ) );
+						$result = array( 'icon' => 'yes', 'text' => __( 'Fully compatible' ) );
 					}
 
 					$output .= '<h4 class="pwpch-name">
-						<i class="pwpch-symbol dashicons dashicons-' . $result['icon'] . '"></i> ' . $args['name'] . ' <small>(' . $args['type'] . ' ) | <a href="' . $args['uri'] . '" target="_blank">' . __( 'Details', 'pkgTextdomain', 'pluswp-check-i18n' ) . '<i class="dashicons dashicons-external"></i></a> | <em>' . $result['text'] . '</em></small>
+						<i class="pwpch-symbol dashicons dashicons-' . $result['icon'] . '"></i> ' . $args['name'] . ' <small>(' . $args['type'] . ' ) | <a href="' . $args['uri'] . '" target="_blank">' . __( 'Details' ) . '<i class="dashicons dashicons-external"></i></a> | <em>' . $result['text'] . '</em></small>
 					</h4>';
 
 					$output .= $output_messages;
@@ -326,7 +316,7 @@ final class PWP_Check {
 
 				if ( current_user_can( 'delete_plugins' ) ) {
 					/* translators: %s: plugin name */
-					$output .= '<a href="' . wp_nonce_url( 'plugins.php?action=deactivate&amp;plugin=' . $plugin_file . '&amp;plugin_status=' . $context . '&amp;paged=' . $page . '&amp;s=' . $s . '#pluswp-check', 'deactivate-plugin_' . $plugin_file ) . '" class="button button-primary" aria-label="' . esc_attr( sprintf( __( 'Deactivate %s', 'pkgTextdomain', 'pluswp-check-i18n' ), 'PlusWP Check' ) ) . '">' . esc_attr( sprintf( __( 'Deactivate %s now', 'pkgTextdomain', 'pluswp-check-i18n' ), 'PlusWP Check' ) ) . '</a>';
+					$output .= '<a href="' . wp_nonce_url( 'plugins.php?action=deactivate&amp;plugin=' . $plugin_file . '&amp;plugin_status=' . $context . '&amp;paged=' . $page . '&amp;s=' . $s . '#pluswp-check', 'deactivate-plugin_' . $plugin_file ) . '" class="button button-primary" aria-label="' . esc_attr( sprintf( __( 'Deactivate %s' ), 'PlusWP Check' ) ) . '">' . esc_attr( sprintf( __( 'Deactivate %s now' ), 'PlusWP Check' ) ) . '</a>';
 				}
 				echo $output;
 			?>
