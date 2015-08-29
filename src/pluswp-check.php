@@ -170,10 +170,10 @@ final class PWP_Check {
 	public static function check_version( $min_version = '', $of = 'php' ) {
 		if ( $of === 'php' ) {
 			$current_version = phpversion();
-			$error_msg = sprintf( __( 'PHP version %1$s is too low, %2$s is required.' ), $current_version, $min_php_version );
+			$error_msg = sprintf( __( 'PHP version %1$s is too low, %2$s is required.' ), $current_version, $min_version );
 		} else {
 			$current_version = get_bloginfo( 'version' );
-			$error_msg = sprintf( __( 'WordPress version %1$s currently installed is too low, %2$s is required.' ), $current_version, $min_php_version );
+			$error_msg = sprintf( __( 'WordPress version %1$s currently installed is too low, %2$s is required.' ), $current_version, $min_version );
 		}
 
 		load_plugin_textdomain( 'pkgTextDomain', false, dirname( plugin_basename( PWPch_PLUGIN_FILE ) ), '/languages/' );
