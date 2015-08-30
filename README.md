@@ -1,10 +1,13 @@
-# PlusWP Check
+# PlusWP Check [![Build Status](https://img.shields.io/badge/by-PlusWP-blue.svg?style=social)]() 
+
 [![Build Status](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/build.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/build-status/master) [![Quality](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/?branch=master) 
 [![Dependency Status](https://david-dm.org/boennemann/badges.svg)](https://david-dm.org/boennemann/badges)
 [![WordPress](https://img.shields.io/wordpress/plugin/dt/pluwp-check.svg)]()
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg)](https://github.com/PlusWP/pluswp-check/blob/master/license.txt)
 
 > Check all the PlusWP products (both plugins and themes) against your current WordPress setup.
+
+[![Gratipay](https://img.shields.io/gratipay/PlusWP.svg)]() *If you like this project and you can afford it consider donating*
 
 Each PlusWP customer or anyone who will use a PlusWP product should install this plugin first to be sure that the plugin or the theme they want to use is compatible with their current setup. The purpose of this plugin is to avoid  refunds or complains about easily solvable problems such as incompatibilites.
 Once installed this plugin immediately displays a notice showing whether each product is compatible, you'll get:
