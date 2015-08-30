@@ -8,12 +8,12 @@ var sequence = require('gulp-sequence');
 // @access private
 gulp.task('_release-prepare-folder', sequence([
   // '_release-clean', // @@doubt \\
-  '_release-copy'
+  '_release-copy',
+  '_release-replace-words'
 ]));
 
 // @access public
 gulp.task('_release-prepare', ['_release-prepare-folder'], sequence([
-  '_release-replace-words',
   '_release-create-index',
   'grunt-lang'
 ]));
