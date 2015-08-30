@@ -1,4 +1,4 @@
-# PlusWP Check [![Build Status](https://img.shields.io/badge/by-PlusWP-blue.svg?style=social)]() 
+# PlusWP Check [![by PlusWP](https://img.shields.io/badge/by-PlusWP-blue.svg?style=social)]()
 
 [![Build Status](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/build.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/build-status/master) [![Quality](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/?branch=master) 
 [![Dependency Status](https://david-dm.org/boennemann/badges.svg)](https://david-dm.org/boennemann/badges)
