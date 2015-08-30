@@ -3,20 +3,20 @@
 /**
  * PlusWP Check
  *
- * pkgDescription
+ * Check PlusWP products compatibility with your current setup.
  *
  * @package           PWP_Check
  *
  * @wordpress-plugin
  * Plugin Name:       PlusWP Check
  * Plugin URI:        http://pluswp.com/check
- * Description:       pkgDescription
- * Version:           pkgVersion
+ * Description:       Check PlusWP products compatibility with your current setup.
+ * Version:           0.0.1
  * Author:            PlusWP
  * Author URI:        http://pluswp.com
  * License:           GPLv2 or later (license.txt)
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       pkgTextDomain
+ * Text Domain:       pwpch
  * Domain Path:       /languages
  */
 
@@ -33,7 +33,7 @@ define( 'PWPch_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
  * @author     PlusWP <dev@pluswp.com> (http://pluswp.com)
  * @copyright  2015 PlusWP (kunderi kuus)
  * @license    GPL-2.0+
- * @version    Release: pkgVersion
+ * @version    Release: 0.0.1
  * @link       http://pluswp.com/customize-plus
  */
 final class PWP_Check {
@@ -94,7 +94,7 @@ final class PWP_Check {
 	 */
 	public function __construct() {
 		// Translate plugin meta
-		__( 'pkgDescription' );
+		__( 'Check PlusWP products compatibility with your current setup.', 'pwpch' );
 
 		if ( is_admin() ) {
 			add_action( 'admin_notices', array( __CLASS__, 'show_notice' ) );
@@ -116,11 +116,11 @@ final class PWP_Check {
 	 */
 	public static function init() {
 		// The "plugin_locale" filter is also used in load_plugin_textdomain()
-		$locale = apply_filters( 'plugin_locale', get_locale(), 'pkgTextDomain' );
+		$locale = apply_filters( 'plugin_locale', get_locale(), 'pwpch' );
 
 		// Make plugin available for translation
-		load_textdomain( 'pkgTextDomain', WP_LANG_DIR . '/pluswp-check/pkgTextDomain-' . $locale . '.mo' );
-		load_plugin_textdomain( 'pkgTextDomain', false, dirname( plugin_basename( PWPch_PLUGIN_FILE ) ) . '/languages/' );
+		load_textdomain( 'pwpch', WP_LANG_DIR . '/pluswp-check/pwpch-' . $locale . '.mo' );
+		load_plugin_textdomain( 'pwpch', false, dirname( plugin_basename( PWPch_PLUGIN_FILE ) ) . '/languages/' );
 	}
 
 	/**
@@ -134,7 +134,7 @@ final class PWP_Check {
 		// Check plugin
 		if ( $file === plugin_basename( PWPch_PLUGIN_FILE ) ) {
 			unset( $links[2] );
-			$links[] = '<a href="pkgHomepage" target="_blank">' . __( 'Project homepage' ) . '</a>';
+			$links[] = '<a href="http://pluswp.com/pluswp-check" target="_blank">' . __( 'Project homepage', 'pwpch' ) . '</a>';
 		}
 		return $links;
 	}
@@ -168,13 +168,13 @@ final class PWP_Check {
 	public static function check_version( $min_version = '', $of = 'php' ) {
 		if ( $of === 'php' ) {
 			$current_version = phpversion();
-			$error_msg = sprintf( __( 'PHP version %1$s is too low, %2$s is required.' ), $current_version, $min_version );
+			$error_msg = sprintf( __( 'PHP version %1$s is too low, %2$s is required.', 'pwpch' ), $current_version, $min_version );
 		} else {
 			$current_version = get_bloginfo( 'version' );
-			$error_msg = sprintf( __( 'WordPress version %1$s currently installed is too low, %2$s is required.' ), $current_version, $min_version );
+			$error_msg = sprintf( __( 'WordPress version %1$s currently installed is too low, %2$s is required.', 'pwpch' ), $current_version, $min_version );
 		}
 
-		load_plugin_textdomain( 'pkgTextDomain', false, dirname( plugin_basename( PWPch_PLUGIN_FILE ) ), '/languages/' );
+		load_plugin_textdomain( 'pwpch', false, dirname( plugin_basename( PWPch_PLUGIN_FILE ) ), '/languages/' );
 
 		// WordPress version is too low
 		if ( version_compare( $min_version, $current_version, '>' ) ) {
@@ -220,12 +220,12 @@ final class PWP_Check {
 		$msg_active = array(
 			'type' => 'error',
 			/* translators: %s: plugin name */
-			'text' => sprintf( __( 'The plugin %s (currently active) is not compatible.' ), '<b>' . $probable_title . '</b>' ),
+			'text' => sprintf( __( 'The plugin %s (currently active) is not compatible.', 'pwpch' ), '<b>' . $probable_title . '</b>' ),
 		);
 		$msg_inactive = array(
 			'type' => 'warning',
 			/* translators: %s: plugin name */
-			'text' => sprintf( __( 'The plugin %s, which is currently inactive, is not compatible.' ), '<b>' . $probable_title . '</b>' ),
+			'text' => sprintf( __( 'The plugin %s, which is currently inactive, is not compatible.', 'pwpch' ), '<b>' . $probable_title . '</b>' ),
 		);
 
 		// if the plugin is active
@@ -262,13 +262,13 @@ final class PWP_Check {
 			<h2 class="pwpch-title">
 				<?php
 					/* translators: %s: plugin name */
-					esc_attr_e( sprintf( __( '%s report' ), 'PlusWP Check' ) );
+					esc_attr_e( sprintf( __( '%s report', 'pwpch' ), 'PlusWP Check' ) );
 				?>
 			</h2>
 			<h3 class="pwpch-desc">
 				<?php
 					/* translators: %s: plugin name */
-					esc_attr_e( sprintf( __( 'Listed here are all %s products with information about the compatibility of each product with your current WordPress and server configuration.' ), 'PlusWP' ) );
+					esc_attr_e( sprintf( __( 'Listed here are all %s products with information about the compatibility of each product with your current WordPress and server configuration.', 'pwpch' ), 'PlusWP' ) );
 				?>
 			</h3>
 			<?php
@@ -306,19 +306,19 @@ final class PWP_Check {
 					$upload_dir = wp_upload_dir()['basedir'];
 					if ( isset( $args['upload_dir_writable'] ) && $args['upload_dir_writable'] && ! wp_is_writable( $upload_dir ) ) {
 						$has_errors = true;
-						$output_messages .= '<p>' . $icon_error . sprintf( __( 'The filepath %s needs to be writable.' ), '<code>' . $upload_dir . '</code>' ) . '</p>';
+						$output_messages .= '<p>' . $icon_error . sprintf( __( 'The filepath %s needs to be writable.', 'pwpch' ), '<code>' . $upload_dir . '</code>' ) . '</p>';
 					}
 
 					if ( $has_errors ) {
-						$result = array( 'icon' => 'no', 'text' => __( 'Not compatible' ) );
+						$result = array( 'icon' => 'no', 'text' => __( 'Not compatible', 'pwpch' ) );
 					} else if ( $has_warnings ) {
-						$result = array( 'icon' => 'yes warning', 'text' => __( 'Compatible but be careful' ) );
+						$result = array( 'icon' => 'yes warning', 'text' => __( 'Compatible but be careful', 'pwpch' ) );
 					} else {
-						$result = array( 'icon' => 'yes', 'text' => __( 'Fully compatible' ) );
+						$result = array( 'icon' => 'yes', 'text' => __( 'Fully compatible', 'pwpch' ) );
 					}
 
 					$output .= '<h4 class="pwpch-name">
-						<i class="pwpch-symbol dashicons dashicons-' . $result['icon'] . '"></i> ' . $args['name'] . ' <small>(' . $args['type'] . ' ) | <a href="' . $args['uri'] . '" target="_blank">' . __( 'Details' ) . '<i class="dashicons dashicons-external"></i></a> | <em>' . $result['text'] . '</em></small>
+						<i class="pwpch-symbol dashicons dashicons-' . $result['icon'] . '"></i> ' . $args['name'] . ' <small>(' . $args['type'] . ' ) | <a href="' . $args['uri'] . '" target="_blank">' . __( 'Details', 'pwpch' ) . '<i class="dashicons dashicons-external"></i></a> | <em>' . $result['text'] . '</em></small>
 					</h4>';
 
 					$output .= $output_messages;
@@ -326,7 +326,7 @@ final class PWP_Check {
 
 				if ( current_user_can( 'delete_plugins' ) ) {
 					/* translators: %s: plugin name */
-					$output .= '<a href="' . wp_nonce_url( 'plugins.php?action=deactivate&amp;plugin=' . $plugin_file . '&amp;plugin_status=' . $context . '&amp;paged=' . $page . '&amp;s=' . $s . '#pluswp-check', 'deactivate-plugin_' . $plugin_file ) . '" class="button button-primary" aria-label="' . esc_attr( sprintf( __( 'Deactivate %s' ), 'PlusWP Check' ) ) . '">' . esc_attr( sprintf( __( 'Deactivate %s now' ), 'PlusWP Check' ) ) . '</a>';
+					$output .= '<a href="' . wp_nonce_url( 'plugins.php?action=deactivate&amp;plugin=' . $plugin_file . '&amp;plugin_status=' . $context . '&amp;paged=' . $page . '&amp;s=' . $s . '#pluswp-check', 'deactivate-plugin_' . $plugin_file ) . '" class="button button-primary" aria-label="' . esc_attr( sprintf( __( 'Deactivate %s', 'pwpch' ), 'PlusWP Check' ) ) . '">' . esc_attr( sprintf( __( 'Deactivate %s now', 'pwpch' ), 'PlusWP Check' ) ) . '</a>';
 				}
 				echo $output;
 			?>
