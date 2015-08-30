@@ -6,6 +6,12 @@ var pkg = require('../../package.json');
 var sequence = require('gulp-sequence');
 var del = require('del');
 
+var pathMoFiles = [
+  './build/languages/*.mo',
+  '!./build/languages/' + pkg.config.textDomain + '-*.mo'
+];
+
+
 // @access private, called by `gulp release`
 gulp.task('_release-prepare', ['_release-lang'], sequence([
   '_release-create-index',
@@ -24,11 +30,6 @@ gulp.task('_release-folders', sequence([
   '_release-copy',
 ]));
 
-var pathMoFiles = [
-  './build/languages/*.mo',
-  '!./build/languages/' + pkg.config.textDomain + '-*.mo'
-];
-
 // @access private
 gulp.task('_release-lang-mo_rename', function () {
   return gulp.src(pathMoFiles)
@@ -39,15 +40,4 @@ gulp.task('_release-lang-mo_rename', function () {
 // @access private
 gulp.task('_release-lang-mo', ['_release-lang-mo_rename'], function (cb) {
   del(pathMoFiles, cb);
-});
-
-// @access public
-gulp.task('deploy', ['_deploy-build']);
-
-// @access private
-gulp.task('_deploy-build', function () {
-  return gulp.src('./build/**/*')
-    .pipe($.ghPages({
-      branch: 'trunk'
-    }));
 });
