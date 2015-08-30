@@ -4,9 +4,9 @@
 ![PlusWP](https://raw.githubusercontent.com/PlusWP/roots/master/design/common/favicons/android-chrome-72x72.png) This plugin check all the PlusWP products (both plugins and themes) against your current WordPress setup.
 Each PlusWP customer or anyone who will use a PlusWP product should install this plugin first to be sure that the plugin or the theme they want to use is compatible with their current setup. The purpose of this plugin is to avoid  refunds or complains about easily solvable problems such as incompatibilites.
 Once installed this plugin immediately displays a notice showing whether each product is compatible, you'll get:
-- a green checkmark when everything is fine, the product is *compatible*.
-- the product is *compatible* but there are some warnings that you should be careful of
-- a red icon when the product is *not compatible*, with a list of the problem to fix in order to get it working
+- a **green** checkmark when everything is fine, the product is *compatible*.
+- a **yellow** checkmark when the product is *compatible* but there are some warnings that you should be careful of
+- a **red** icon when the product is *not compatible*, with a list of the problem to fix in order to get it working
 
 The plugin is meant to be deactivated and deleted as soon as possible, in fact it will pedantically show on your screen on every admin page until you will deactivate it.
 
