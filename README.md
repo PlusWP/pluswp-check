@@ -1,10 +1,10 @@
 # PlusWP Check [![by PlusWP](https://img.shields.io/badge/by-PlusWP-lightgrey.svg?style=social)]()
 
+[![GitHub release](https://img.shields.io/github/release/PlusWP/pluswp-check.svg)]()
 [![Build Status](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/build.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/build-status/master)
 [![Codacy Badge](https://api.codacy.com/project/badge/d249bfc8bd0c45599c537cb59ec86cb9)](https://www.codacy.com/app/kuus/pluswp-check)
 [![Quality](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/?branch=master) 
 [![devDependency Status](https://david-dm.org/PlusWP/pluswp-check/dev-status.svg)](https://david-dm.org/PlusWP/pluswp-check#info=devDependencies)
-[![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](https://github.com/PlusWP/pluswp-check/blob/master/license.txt)
 
 > Check all the PlusWP products (both plugins and themes) against your current WordPress setup.
 
