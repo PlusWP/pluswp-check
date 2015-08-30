@@ -4,7 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/PlusWP/pluswp-check.svg)]()
 [![Build Status](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/build.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/build-status/master)
 [![Codacy Badge](https://api.codacy.com/project/badge/d249bfc8bd0c45599c537cb59ec86cb9)](https://www.codacy.com/app/kuus/pluswp-check)
-[![Quality](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/?branch=master) 
+[![Quality](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/?branch=master)
 [![devDependency Status](https://david-dm.org/PlusWP/pluswp-check/dev-status.svg)](https://david-dm.org/PlusWP/pluswp-check#info=devDependencies)
 
 > Check all the PlusWP products (both plugins and themes) against your current WordPress setup.
@@ -36,7 +36,7 @@ There are various ways you can contribute:
 
 1. Raise an [issue](https://github.com/PlusWP/pluswp-check/issues) on GitHub
 2. Send a [Pull Request](https://help.github.com/articles/creating-a-pull-request/) with your bug fixes and/or new features
-3. Translate PlusWP Check into [different languages](https://www.transifex.com/projects/p/pluswp-check/)
+3. Translate this project into [different languages](https://www.transifex.com/projects/p/pluswp-check/)
 4. Provide feedback and suggestions on [enhancements](https://github.com/PlusWP/pluswp-check/issues?direction=desc&labels=Enhancement&page=1&sort=created&state=open)
 
 
