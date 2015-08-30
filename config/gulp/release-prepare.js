@@ -9,11 +9,11 @@ var sequence = require('gulp-sequence');
 gulp.task('_release-prepare-folder', sequence([
   // '_release-clean', // @@doubt \\
   '_release-copy',
-  '_release-replace-words'
 ]));
 
 // @access public
 gulp.task('_release-prepare', ['_release-prepare-folder'], sequence([
   '_release-create-index',
+  '_release-replace-words',
   'grunt-lang'
 ]));
