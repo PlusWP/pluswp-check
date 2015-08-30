@@ -5,13 +5,13 @@
 var sequence = require('gulp-sequence');
 
 
-// @private
+// @access private
 gulp.task('_release-prepare-folder', sequence([
   // '_release-clean', // @@doubt \\
   '_release-copy'
 ]));
 
-// @public
+// @access public
 gulp.task('_release-prepare', ['_release-prepare-folder'], sequence([
   '_release-create-index',
   'grunt-lang'
