@@ -33,12 +33,12 @@
     "grunt-wp-readme-to-markdown": "^0.9.0",
     "grunt-shell": "^1.1.1",
     "load-grunt-tasks": "~3.2.0",
+    "gulp-grunt": "~0.5.2",
     "gulp-sequence": "~0.4.1",
-    "gulp-load-plugins": "~1.0.0-rc.1",
-    "minimist": "~1.2.0",
     "gulp-task-listing": "~1.0.1",
     "gulp-notify": "~2.2.0",
-    "gulp-grunt": "~0.5.2",
+    "gulp-load-plugins": "~1.0.0-rc.1",
+    "minimist": "~1.2.0",
     "del": "~1.2.1"
   },
   "engines": {

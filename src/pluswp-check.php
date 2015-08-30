@@ -94,8 +94,6 @@ final class PWP_Check {
 	 */
 	public function __construct() {
 		// Translate plugin meta
-		__( 'pkgNamePretty' );
-		__( 'pkgAuthorName' );
 		__( 'pkgDescription' );
 
 		if ( is_admin() ) {
@@ -136,7 +134,7 @@ final class PWP_Check {
 		// Check plugin
 		if ( $file === plugin_basename( PWPch_PLUGIN_FILE ) ) {
 			unset( $links[2] );
-			$links[] = '<a href="http://pluswp.com/check/" target="_blank">' . __( 'Project homepage' ) . '</a>';
+			$links[] = '<a href="pkgHomepage" target="_blank">' . __( 'Project homepage' ) . '</a>';
 		}
 		return $links;
 	}
@@ -221,10 +219,12 @@ final class PWP_Check {
 	public static function is_plugin_installed( $probable_file, $probable_title ) {
 		$msg_active = array(
 			'type' => 'error',
+			/* translators: %s: plugin name */
 			'text' => sprintf( __( 'The plugin %s (currently active) is not compatible.' ), '<b>' . $probable_title . '</b>' ),
 		);
 		$msg_inactive = array(
 			'type' => 'warning',
+			/* translators: %s: plugin name */
 			'text' => sprintf( __( 'The plugin %s, which is currently inactive, is not compatible.' ), '<b>' . $probable_title . '</b>' ),
 		);
 
