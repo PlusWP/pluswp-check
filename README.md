@@ -1,9 +1,9 @@
 # PlusWP Check [![by PlusWP](https://img.shields.io/badge/by-PlusWP-blue.svg?style=social)]()
 
-[![Gratipay](https://img.shields.io/gratipay/PlusWP.svg)]()
-[![Build Status](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/build.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/build-status/master) [![Quality](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/?branch=master) 
+[![Build Status](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/build.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/build-status/master)
+[![Codacy Badge](https://api.codacy.com/project/badge/d249bfc8bd0c45599c537cb59ec86cb9)](https://www.codacy.com/app/kuus/pluswp-check)
+[![Quality](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/?branch=master) 
 [![Dependency Status](https://david-dm.org/boennemann/badges.svg)](https://david-dm.org/boennemann/badges)
-[![WordPress](https://img.shields.io/wordpress/plugin/dt/pluwp-check.svg)]()
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg)](https://github.com/PlusWP/pluswp-check/blob/master/license.txt)
 
 > Check all the PlusWP products (both plugins and themes) against your current WordPress setup.
@@ -37,6 +37,11 @@ There are various ways you can contribute:
 2. Send a [Pull Request](https://help.github.com/articles/creating-a-pull-request/) with your bug fixes and/or new features
 3. Translate PlusWP Check into [different languages](https://www.transifex.com/projects/p/pluswp-check/)
 4. Provide feedback and suggestions on [enhancements](https://github.com/PlusWP/pluswp-check/issues?direction=desc&labels=Enhancement&page=1&sort=created&state=open)
+
+
+Donate
+---------------
+[![Gratipay](https://img.shields.io/gratipay/PlusWP.svg)]()
 
 
 Translations
