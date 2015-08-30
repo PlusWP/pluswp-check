@@ -1,6 +1,7 @@
 # PlusWP Check
 [![Build Status](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/build.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/build-status/master) [![Quality](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/?branch=master) 
 [![Dependency Status](https://david-dm.org/boennemann/badges.svg)](https://david-dm.org/boennemann/badges)
+[![WordPress](https://img.shields.io/wordpress/plugin/dt/pluwp-check.svg)]()
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg)](https://github.com/PlusWP/pluswp-check/blob/master/license.txt)
 
 > Check all the PlusWP products (both plugins and themes) against your current WordPress setup.
