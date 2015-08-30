@@ -259,8 +259,18 @@ final class PWP_Check {
 		?>
 		<div class="updated pwpch">
 			<img src="<?php echo PWPch_PLUGIN_URL . 'logo.png'; ?>" alt="PlusWP logo" width="65" height="65">
-			<h2 class="pwpch-title"><?php esc_attr_e( sprintf( __( '%s report' ), 'PlusWP Check' ) ); ?></h2>
-			<h3 class="pwpch-desc"><?php esc_attr_e( sprintf( __( 'Listed here are all %s products with information about the compatibility of each product with your current WordPress and server configuration.' ), 'PlusWP' ) ); ?></h3>
+			<h2 class="pwpch-title">
+				<?php
+					/* translators: %s: plugin name */
+					esc_attr_e( sprintf( __( '%s report' ), 'PlusWP Check' ) );
+				?>
+			</h2>
+			<h3 class="pwpch-desc">
+				<?php
+					/* translators: %s: plugin name */
+					esc_attr_e( sprintf( __( 'Listed here are all %s products with information about the compatibility of each product with your current WordPress and server configuration.' ), 'PlusWP' ) );
+				?>
+			</h3>
 			<?php
 				global $context, $page, $s;
 				$plugin_file = 'pluswp-check/pluswp-check.php';
