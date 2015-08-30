@@ -1,5 +1,9 @@
 /* jshint node: true */
 
+/**
+ * Gruntfile to automate language translations
+ * thanks to {@link http://wp-translations.org/grunt-transifex-wordpress/}
+ */
 module.exports = function (grunt) {
   'use strict';
 
@@ -59,6 +63,20 @@ module.exports = function (grunt) {
       }
     },
 
+    // Exec shell commands.
+    shell: {
+      options: {
+        stdout: true,
+        stderr: true
+      },
+      txpush: {
+       command: 'tx push -s'
+      },
+      txpull: {
+        command: 'tx pull -a --minimum-perc=5'
+      }
+    },
+
     // @@todo here we miss only to automatically rename all the po/mo
     // files with the textdomain prefix \\
 
@@ -81,62 +99,6 @@ module.exports = function (grunt) {
       },
     },
 
-    // Exec shell commands.
-    shell: {
-      options: {
-        stdout: true,
-        stderr: true
-      },
-      // Limited to Maintainers so
-      // txpush: {
-      //  command: 'tx push -s' // push the resources
-      // },
-      txpull: {
-        command: 'tx pull -a --minimum-perc=25' // pull the .po files
-      }
-    },
-
-    // Clean up build directory
-    clean: {
-      main: ['build']
-    },
-
-    // Copy the theme into the build directory
-    copy: {
-      main: {
-        src:  [
-          '**/*',
-          '!bower_components/**'
-        ],
-        expand: true,
-        cwd: 'src/',
-        dest: 'build/'
-      }
-    },
-
-    // compress
-    compress: {
-      main: {
-        options: {
-          mode: 'zip',
-          archive: '.tmp/release/<%= pkg.name %>.<%= pkg.version %>.zip'
-        },
-        src: ['**/*'],
-        expand: true,
-        cwd: 'build/',
-        dest: ''
-      }
-    },
-
-    // // readme.txt to markdown
-    // wp_readme_to_markdown: {
-    //   readme: {
-    //     files: {
-    //       'build/readme.txt': 'README.md'
-    //     }
-    //   }
-    // },
-
     // // php tests
     // phpunit: {
     //   classes: {
@@ -155,33 +117,27 @@ module.exports = function (grunt) {
   });
 
   // Load tasks
-  require('load-grunt-tasks')(grunt);
-  // grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-wp-i18n');
+  grunt.loadNpmTasks('grunt-potomo');
+  grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-phpdocumentor');
+  // grunt.loadNpmTasks('grunt-flatdoc');
 
   // Register tasks
-  grunt.registerTask('build', ['clean', 'copy', 'compress']);
-
-  // Makepot and push it on Transifex
-  grunt.registerTask('tx-push', ['makepot', 'exec:txpush_s']);
-  // Pull from Transifex and create .mo
-  grunt.registerTask('tx-pull', ['exec:txpull', 'potomo']);
-  grunt.registerTask('lang', ['addtextdomain', 'makepot', 'potomo']);
-
-  grunt.registerTask('docs', ['phpdocumentor'/*, 'flatdoc'*/]);
-  // @@todo docs should be ignored and deployed or committed to gh-pages \\
-
-
-  grunt.registerTask('default', ['build']);
-  // grunt.registerTask( 'test', ['phpunit', 'qunit'] );
-  // grunt.registerTask('travis', ['lintPHP']);
-
-  grunt.registerTask('release', [
-    'clean',
-    'copy',
-    'lang',
-    'compress',
-    'docs'
+  grunt.registerTask('lang', [
+    'addtextdomain',
+    // makepot
+    'makepot',
+    // push pot on Transifex
+    'shell:txpush',
+    // pull from Transifex
+    'shell:txpull',
+    // create .mo files
+    'potomo'
   ]);
-
-  // grunt.registerTask('t', ['testtask']);
+  // grunt.registerTask('docs', ['phpdocumentor'/*, 'flatdoc'*/]);
+  // grunt.registerTask('test', ['phpunit', 'qunit'] );
+  // grunt.registerTask('travis', ['lintPHP']);
+  // @@todo docs should be ignored and deployed or committed to gh-pages \\
+  grunt.registerTask('default', ['rename']);
 };

@@ -696,7 +696,4 @@ Public License instead of this License.  But first, please read
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 The source code for any program binaries that are included with PlusWP Check
-can be freely obtained at the following URL:
-
-	https://github.com/PlusWP/pluswp-check
-
+can be freely obtained at the following URL: https://github.com/PlusWP/pluswp-check

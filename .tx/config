@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[pluswp-check.pwpch]
+file_filter = build/languages/<lang>.po
+source_file = build/languages/pwpch.pot
+source_lang = en
+type = PO
