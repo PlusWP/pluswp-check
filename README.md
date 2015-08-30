@@ -40,11 +40,6 @@ There are various ways you can contribute:
 4. Provide feedback and suggestions on [enhancements](https://github.com/PlusWP/pluswp-check/issues?direction=desc&labels=Enhancement&page=1&sort=created&state=open)
 
 
-Donate
----------------
-[![Gratipay](https://img.shields.io/gratipay/PlusWP.svg)]()
-
-
 Translations
 ---------------
 
@@ -53,9 +48,15 @@ We use [Transifex](https://www.transifex.com) to manage translations. **Anyone**
 [Check this project on Transifex](https://www.transifex.com/PlusWP/pluswp-check/)
 
 
+Donate
+---------------
+[![Gratipay](https://img.shields.io/gratipay/PlusWP.svg)]()
+
+
 License
 ---------------
-[GPLv2+](http://www.gnu.org/licenses/gpl-2.0.html) © [PlusWP](http://pluswp.com)
+ [![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](https://github.com/PlusWP/customize-plus--theme/blob/master/license.txt) [![PlusWP](https://img.shields.io/badge/%C2%A9PlusWP-2015-blue.svg)](http://pluswp.com)
+
 
 ---------------
 :registered: PlusWP 2015 :link: [pluswp.com](http://pluswp.com) :email: dev@pluswp.com
