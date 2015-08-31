@@ -1,6 +1,6 @@
 {
   "name": "pluswp-check",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Check PlusWP products compatibility with your current WordPress setup.",
   "config": {
     "namePretty": "PlusWP Check",
@@ -42,7 +42,8 @@
     "conventional-changelog": "~0.4.2",
     "gulp-util": "~3.0.6",
     "gulp-bump": "~0.3.1",
-    "gulp-git": "~1.2.4"
+    "gulp-git": "~1.2.4",
+    "gulp-tag-version": "~1.3.0"
   },
   "engines": {
     "node": ">=0.10.0"
