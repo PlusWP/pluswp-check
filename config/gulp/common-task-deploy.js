@@ -3,7 +3,7 @@
 'use strict';
 
 // @access public
-// gulp.task('deploy', ['_deploy-build']);
+gulp.task('deploy', ['_deploy-build']);
 
 // @access private
 gulp.task('_deploy-copy_basic_files', function () {
@@ -12,7 +12,7 @@ gulp.task('_deploy-copy_basic_files', function () {
 });
 
 // @access private
-gulp.task('_deploy-build', ['release', '_deploy-copy_basic_files'], function () {
+gulp.task('_deploy-build', ['_deploy-copy_basic_files'], function () {
   return gulp.src('./build/**/*')
     .pipe($.ghPages({
       branch: 'trunk'
