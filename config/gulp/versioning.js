@@ -8,7 +8,7 @@
 // var exec = require('child_process').exec;
 // var changelog = require('conventional-changelog');
 
-var CONFIG = require('./common-config');
+VAR CONFIG = require('./common-config');
 
 /**
  * Versioning tasks
