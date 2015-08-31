@@ -38,7 +38,8 @@
     "gulp-notify": "~2.2.0",
     "gulp-replace": "~0.5.4",
     "gulp-rename": "~1.2.2",
-    "gulp-gh-pages": "~0.5.2"
+    "gulp-gh-pages": "~0.5.2",
+    "conventional-changelog": "~0.4.2"
   },
   "engines": {
     "node": ">=0.10.0"
