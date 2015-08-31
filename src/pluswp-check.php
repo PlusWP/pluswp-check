@@ -276,7 +276,7 @@ final class PWP_Check {
 				$plugin_file = 'pluswp-check/pluswp-check.php';
 				$output = '';
 
-				foreach ( self::$to_check as $key => $args ) {
+				foreach ( self::$to_check as $args ) {
 					$has_errors = false;
 					$has_warnings = false;
 					$output_messages = '';

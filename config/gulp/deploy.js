@@ -3,7 +3,7 @@
 'use strict';
 
 // @access public
-gulp.task('deploy', ['_deploy-build']);
+// gulp.task('deploy', ['_deploy-build']);
 
 // @access private
 gulp.task('_deploy-copy_basic_files', function () {

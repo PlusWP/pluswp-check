@@ -54,7 +54,7 @@ We use [Transifex](https://www.transifex.com) to manage translations. **Anyone**
 
 Donate
 ---------------
-[![Gratipay](https://img.shields.io/gratipay/PlusWP.svg)]()
+[![Gratipay](https://img.shields.io/gratipay/PlusWP.svg)](https://gratipay.com/PlusWP)
 
 
 License
