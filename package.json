@@ -1,7 +1,7 @@
 {
   "name": "pluswp-check",
   "version": "0.0.1",
-  "description": "Check PlusWP products compatibility with your current setup.",
+  "description": "Check PlusWP products compatibility with your current WordPress setup.",
   "config": {
     "namePretty": "PlusWP Check",
     "nameShort": "PWPch",
