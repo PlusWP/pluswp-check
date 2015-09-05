@@ -1,6 +1,4 @@
-PlusWP Check
-
-Copyright 2015
+Copyright (c) 2015 PlusWP <dev@pluswp.com> (http://pluswp.com/)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -697,4 +695,3 @@ Public License instead of this License.  But first, please read
 
 The source code for any program binaries that are included with PlusWP Check
 can be freely obtained at the following URL: https://github.com/PlusWP/pluswp-check
--bootstrap
