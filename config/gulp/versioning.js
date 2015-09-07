@@ -1,4 +1,4 @@
-/* global gulp, $ */
+/* global gulp, $, CONFIG */
 /* jshint node: true */
 'use strict';
 
@@ -7,8 +7,6 @@
 // var semver = require('semver');
 // var exec = require('child_process').exec;
 // var changelog = require('conventional-changelog');
-
-var CONFIG = require('./common-config');
 
 /**
  * Versioning tasks

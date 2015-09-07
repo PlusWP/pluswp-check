@@ -32,6 +32,6 @@
     <files>
         <file>*.php</file>
         <directory>build</directory>
-        <ignore>vendor/*</ignore>
+        <ignore>*/vendor/*</ignore>
     </files>
-</phpdoc>c>
+</phpdoc>
