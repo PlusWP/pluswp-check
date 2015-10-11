@@ -379,16 +379,16 @@ final class PWP_Check {
 				font-weight: 100;
 			}
 			.pwpch-symbol.dashicons {
-		    display: inline-block;
-		    width: 12px;
-	      height: 12px;
-		    line-height: 13px;
-		    padding: 3px 6px 3px 0;
-		    margin-right: 5px;
-		    border-radius: 13px;
-		    font-size: 17px;
-		    text-align: center;
-		    opacity: .7;
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				line-height: 13px;
+				padding: 3px 6px 3px 0;
+				margin-right: 5px;
+				border-radius: 13px;
+				font-size: 17px;
+				text-align: center;
+				opacity: .7;
 				color: #fff;
 			}
 			.pwpch-name a {
@@ -396,26 +396,26 @@ final class PWP_Check {
 			}
 			.pwpch-name a .dashicons {
 				padding-left: 3px;
-    		font-size: 19px;
+				font-size: 19px;
 			}
 			.pwpch-symbol.dashicons-no {
 				background: #dd3d36;
 			}
 			.pwpch p .dashicons {
-		    color: #999;
-		    margin-left: 20px;
-		    font-size: 15px;
-		    line-height: 19px;
-		  }
-		  .pwpch p:hover .dashicons {
-		    color: #dd3d36;
-		  }
+				color: #999;
+				margin-left: 20px;
+				font-size: 15px;
+				line-height: 19px;
+			}
+			.pwpch p:hover .dashicons {
+				color: #dd3d36;
+			}
 			.pwpch-symbol.dashicons-yes.warning {
 				background: #ffba00;
 			}
-		  .pwpch p:hover .dashicons.warning {
-		    color: #ffba00;
-		  }
+			.pwpch p:hover .dashicons.warning {
+				color: #ffba00;
+			}
 			.pwpch-symbol.dashicons-yes {
 				background: #7ad03a;
 			}
