@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/326cbccb098e4defb0003d8937c867cc)](https://www.codacy.com/app/kuus/pluswp-check?utm_source=github.com&utm_medium=referral&utm_content=PlusWP/pluswp-check&utm_campaign=badger)
 # PlusWP Check [![by PlusWP](https://img.shields.io/badge/by-PlusWP-lightgrey.svg?style=social)]()
 
 [![WordPress plugin](https://img.shields.io/wordpress/plugin/v/pluswp-check.svg)]()
