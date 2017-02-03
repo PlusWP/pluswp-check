@@ -9,11 +9,11 @@
  *
  * @wordpress-plugin
  * Plugin Name:       PlusWP Check
- * Plugin URI:        httpS://pluswp.com/check
+ * Plugin URI:        https://pluswp.com/check
  * Description:       pkgDescription
  * Version:           pkgVersion
  * Author:            PlusWP
- * Author URI:        httpS://pluswp.com
+ * Author URI:        https://pluswp.com
  * License:           GPLv2 or later (license.txt)
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       pkgTextDomain
@@ -30,11 +30,11 @@ define( 'PWPch_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
  * Short description for class
  *
  * @package    PWP_Check
- * @author     PlusWP <dev@pluswp.com> (httpS://pluswp.com)
+ * @author     PlusWP <dev@pluswp.com> (https://pluswp.com)
  * @copyright  2015 PlusWP (kunderi kuus)
  * @license    GPL-2.0+
  * @version    Release: pkgVersion
- * @link       httpS://pluswp.com/customize-plus
+ * @link       https://pluswp.com/customize-plus
  */
 final class PWP_Check {
 
@@ -47,7 +47,7 @@ final class PWP_Check {
 	public static $to_check = array(
 		'customize-plus' => array(
 			'name' => 'Customize Plus',
-			'uri' => 'httpS://pluswp.com/customize-plus/',
+			'uri' => 'https://pluswp.com/customize-plus/',
 			'type' => 'plugin',
 			'min_php_version' => '5.2.4',
 			'min_wp_version' => '4.3.0',
@@ -60,7 +60,7 @@ final class PWP_Check {
 		),
 		'customize-plus-premium' => array(
 			'name' => 'Customize Plus Premium',
-			'uri' => 'httpS://pluswp.com/customize-plus-premium/',
+			'uri' => 'https://pluswp.com/customize-plus-premium/',
 			'type' => 'plugin',
 			'min_php_version' => '5.2.4',
 			'min_wp_version' => '4.3.0',
@@ -74,7 +74,7 @@ final class PWP_Check {
 		),
 		'plus-bootstrap' => array(
 			'name' => 'Plus Bootstrap',
-			'uri' => 'httpS://pluswp.com/plus-bootstrap/',
+			'uri' => 'https://pluswp.com/plus-bootstrap/',
 			'type' => 'theme',
 			'min_php_version' => '5.2.4',
 			'min_wp_version' => '4.3.0',
