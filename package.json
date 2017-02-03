@@ -8,11 +8,11 @@
     "textDomain": "pwpch",
     "startYear": 2015
   },
-  "homepage": "http://pluswp.com/pluswp-check",
+  "homepage": "httpS://pluswp.com/pluswp-check",
   "author": {
     "name": "PlusWP",
     "email": "dev@pluswp.com",
-    "url": "http://pluswp.com/"
+    "url": "httpS://pluswp.com/"
   },
   "license": "GPL-2.0+",
   "private": true,
@@ -20,7 +20,7 @@
     "url": "https://github.com/PlusWP/pluswp-check"
   },
   "engines": {
-    "node": ">0.12.0"
+    "node": ">=4"
   },
   "devDependencies": {
     "del": "^2.0.0",
