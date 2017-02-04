@@ -3,8 +3,8 @@
 [![WordPress plugin](https://img.shields.io/wordpress/plugin/v/pluswp-check.svg)]()
 [![GitHub release](https://img.shields.io/github/release/PlusWP/pluswp-check.svg)]()
 [![Build Status](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/build.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/build-status/master)
-[![Quality](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/?branch=master)
-[![Codacy Badge](https://api.codacy.com/project/badge/d249bfc8bd0c45599c537cb59ec86cb9)](https://www.codacy.com/app/kuus/pluswp-check)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PlusWP/pluswp-check/?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a8466b456551405da21c28ee0e95efaa)](https://www.codacy.com/app/PlusWP/pluswp-check?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PlusWP/pluswp-check&amp;utm_campaign=Badge_Grade)
 [![devDependency Status](https://david-dm.org/PlusWP/pluswp-check/dev-status.svg)](https://david-dm.org/PlusWP/pluswp-check#info=devDependencies)
 
 > Check all the PlusWP products (both plugins and themes) against your current WordPress setup.
@@ -59,8 +59,8 @@ Donate
 
 License
 ---------------
- [![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](https://github.com/PlusWP/customize-plus--theme/blob/master/license.txt) [![PlusWP](https://img.shields.io/badge/%C2%A9PlusWP-2015-blue.svg)](https://pluswp.com)
+ [![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](https://github.com/PlusWP/customize-plus--theme/blob/master/license.txt) [![PlusWP](https://img.shields.io/badge/%C2%A9PlusWP-2017-blue.svg)](https://pluswp.com)
 
 
 ---------------
-:registered: PlusWP 2015 | [pluswp.com](https://pluswp.com) | dev@pluswp.com
+:registered: PlusWP 2017 | [pluswp.com](https://pluswp.com) | dev@pluswp.com
