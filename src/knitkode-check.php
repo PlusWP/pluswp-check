@@ -1,19 +1,19 @@
 <?php defined( 'ABSPATH' ) or die;
 
 /**
- * PlusWP Check
+ * Knitkode Check
  *
  * pkgDescription
  *
  * @package           PWP_Check
  *
  * @wordpress-plugin
- * Plugin Name:       PlusWP Check
- * Plugin URI:        https://pluswp.com/check
+ * Plugin Name:       Knitkode Check
+ * Plugin URI:        https://knitkode.com/check
  * Description:       pkgDescription
  * Version:           pkgVersion
- * Author:            PlusWP
- * Author URI:        https://pluswp.com
+ * Author:            Knitkode
+ * Author URI:        https://knitkode.com
  * License:           GPLv2 or later (license.txt)
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       pkgTextDomain
@@ -30,11 +30,11 @@ define( 'PWPch_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
  * Short description for class
  *
  * @package    PWP_Check
- * @author     PlusWP <dev@pluswp.com> (https://pluswp.com)
- * @copyright  2017 PlusWP
+ * @author     Knitkode <dev@knitkode.com> (https://knitkode.com)
+ * @copyright  2017 Knitkode
  * @license    GPL-2.0+
  * @version    Release: pkgVersion
- * @link       https://pluswp.com/customize-plus
+ * @link       https://knitkode.com/customize-plus
  */
 final class PWP_Check {
 
@@ -47,7 +47,7 @@ final class PWP_Check {
 	public static $to_check = array(
 		'customize-plus' => array(
 			'name' => 'Customize Plus',
-			'uri' => 'https://pluswp.com/customize-plus/',
+			'uri' => 'https://knitkode.com/customize-plus/',
 			'type' => 'plugin',
 			'min_php_version' => '5.2.4',
 			'min_wp_version' => '4.3.0',
@@ -60,7 +60,7 @@ final class PWP_Check {
 		),
 		'customize-plus-premium' => array(
 			'name' => 'Customize Plus Premium',
-			'uri' => 'https://pluswp.com/customize-plus-premium/',
+			'uri' => 'https://knitkode.com/customize-plus-premium/',
 			'type' => 'plugin',
 			'min_php_version' => '5.2.4',
 			'min_wp_version' => '4.3.0',
@@ -74,7 +74,7 @@ final class PWP_Check {
 		),
 		'plus-bootstrap' => array(
 			'name' => 'Plus Bootstrap',
-			'uri' => 'https://pluswp.com/plus-bootstrap/',
+			'uri' => 'https://knitkode.com/plus-bootstrap/',
 			'type' => 'theme',
 			'min_php_version' => '5.2.4',
 			'min_wp_version' => '4.3.0',
@@ -119,7 +119,7 @@ final class PWP_Check {
 		$locale = apply_filters( 'plugin_locale', get_locale(), 'pkgTextDomain' );
 
 		// Make plugin available for translation
-		load_textdomain( 'pkgTextDomain', WP_LANG_DIR . '/pluswp-check/pkgTextDomain-' . $locale . '.mo' );
+		load_textdomain( 'pkgTextDomain', WP_LANG_DIR . '/knitkode-check/pkgTextDomain-' . $locale . '.mo' );
 		load_plugin_textdomain( 'pkgTextDomain', false, dirname( plugin_basename( PWPch_PLUGIN_FILE ) ) . '/languages/' );
 	}
 
@@ -258,22 +258,22 @@ final class PWP_Check {
 	public static function show_notice() {
 		?>
 		<div class="updated pwpch">
-			<img src="<?php echo PWPch_PLUGIN_URL . 'logo.png'; ?>" alt="PlusWP logo" width="65" height="65">
+			<img src="<?php echo PWPch_PLUGIN_URL . 'logo.png'; ?>" alt="Knitkode logo" width="65" height="65">
 			<h2 class="pwpch-title">
 				<?php
 					/* translators: %s: plugin name */
-					esc_attr_e( sprintf( __( '%s report' ), 'PlusWP Check' ) );
+					esc_attr_e( sprintf( __( '%s report' ), 'Knitkode Check' ) );
 				?>
 			</h2>
 			<h3 class="pwpch-desc">
 				<?php
 					/* translators: %s: plugin name */
-					esc_attr_e( sprintf( __( 'Listed here are all %s products with information about the compatibility of each product with your current WordPress and server configuration.' ), 'PlusWP' ) );
+					esc_attr_e( sprintf( __( 'Listed here are all %s products with information about the compatibility of each product with your current WordPress and server configuration.' ), 'Knitkode' ) );
 				?>
 			</h3>
 			<?php
 				global $context, $page, $s;
-				$plugin_file = 'pluswp-check/pluswp-check.php';
+				$plugin_file = 'knitkode-check/knitkode-check.php';
 				$output = '';
 
 				foreach ( self::$to_check as $args ) {
@@ -326,7 +326,7 @@ final class PWP_Check {
 
 				if ( current_user_can( 'delete_plugins' ) ) {
 					/* translators: %s: plugin name */
-					$output .= '<a href="' . wp_nonce_url( 'plugins.php?action=deactivate&amp;plugin=' . $plugin_file . '&amp;plugin_status=' . $context . '&amp;paged=' . $page . '&amp;s=' . $s . '#pluswp-check', 'deactivate-plugin_' . $plugin_file ) . '" class="button button-primary" aria-label="' . esc_attr( sprintf( __( 'Deactivate %s' ), 'PlusWP Check' ) ) . '">' . esc_attr( sprintf( __( 'Deactivate %s now' ), 'PlusWP Check' ) ) . '</a>';
+					$output .= '<a href="' . wp_nonce_url( 'plugins.php?action=deactivate&amp;plugin=' . $plugin_file . '&amp;plugin_status=' . $context . '&amp;paged=' . $page . '&amp;s=' . $s . '#knitkode-check', 'deactivate-plugin_' . $plugin_file ) . '" class="button button-primary" aria-label="' . esc_attr( sprintf( __( 'Deactivate %s' ), 'Knitkode Check' ) ) . '">' . esc_attr( sprintf( __( 'Deactivate %s now' ), 'Knitkode Check' ) ) . '</a>';
 				}
 				echo $output;
 			?>

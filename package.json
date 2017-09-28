@@ -1,23 +1,23 @@
 {
-  "name": "pluswp-check",
+  "name": "knitkode-check",
   "version": "0.0.1",
-  "description": "Check PlusWP products compatibility with your current WordPress setup.",
+  "description": "Check Knitkode products compatibility with your current WordPress setup.",
   "config": {
-    "namePretty": "PlusWP Check",
+    "namePretty": "Knitkode Check",
     "nameShort": "PWPch",
     "textDomain": "pwpch",
     "startYear": 2015
   },
-  "homepage": "https://pluswp.com/pluswp-check",
+  "homepage": "https://knitkode.com/knitkode-check",
   "author": {
-    "name": "PlusWP",
-    "email": "dev@pluswp.com",
-    "url": "https://pluswp.com/"
+    "name": "Knitkode",
+    "email": "dev@knitkode.com",
+    "url": "https://knitkode.com/"
   },
   "license": "GPL-2.0+",
   "private": true,
   "repository": {
-    "url": "https://github.com/PlusWP/pluswp-check"
+    "url": "https://github.com/knitkode/knitkode-check"
   },
   "engines": {
     "node": ">=4"
