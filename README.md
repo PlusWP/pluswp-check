@@ -1,4 +1,4 @@
-# Knitkode Check [![by Knitkode](https://img.shields.io/badge/by-Knitkode-lightgrey.svg?style=social)]()
+# KnitKode Check [![by KnitKode](https://img.shields.io/badge/by-KnitKode-lightgrey.svg?style=social)]()
 
 [![WordPress plugin](https://img.shields.io/wordpress/plugin/v/knitkode-check.svg)]()
 [![GitHub release](https://img.shields.io/github/release/knitkode/knitkode-check.svg)]()
@@ -7,9 +7,9 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a8466b456551405da21c28ee0e95efaa)](https://www.codacy.com/app/knitkode/knitkode-check?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=knitkode/knitkode-check&amp;utm_campaign=Badge_Grade)
 [![devDependency Status](https://david-dm.org/knitkode/knitkode-check/dev-status.svg)](https://david-dm.org/knitkode/knitkode-check#info=devDependencies)
 
-> Check all the Knitkode products (both plugins and themes) against your current WordPress setup.
+> Check all the KnitKode products (both plugins and themes) against your current WordPress setup.
 
-Each Knitkode customer or anyone who will use a Knitkode product should install this plugin first to be sure that the plugin or the theme they want to use is compatible with their current setup. The purpose of this plugin is to avoid  refunds or complains about easily solvable problems such as incompatibilites.
+Each KnitKode customer or anyone who will use a KnitKode product should install this plugin first to be sure that the plugin or the theme they want to use is compatible with their current setup. The purpose of this plugin is to avoid  refunds or complains about easily solvable problems such as incompatibilites.
 Once installed this plugin immediately displays a notice showing whether each product is compatible, you'll get:
 - a **green** checkmark when everything is fine, the product is *compatible*.
 - a **yellow** checkmark when the product is *compatible* but there are some warnings that you should be careful of
@@ -59,8 +59,8 @@ Donate
 
 License
 ---------------
- [![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](https://github.com/knitkode/knitkode-check/blob/master/license.txt) [![Knitkode](https://img.shields.io/badge/%C2%A9Knitkode-2017-blue.svg)](https://knitkode.com)
+ [![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue.svg)](https://github.com/knitkode/knitkode-check/blob/master/license.txt) [![KnitKode](https://img.shields.io/badge/%C2%A9KnitKode-2017-blue.svg)](https://knitkode.com)
 
 
 ---------------
-:registered: Knitkode 2017 | [knitkode.com](https://knitkode.com) | dev@knitkode.com
+:registered: KnitKode 2017 | [knitkode.com](https://knitkode.com) | dev@knitkode.com

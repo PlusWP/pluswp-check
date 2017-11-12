@@ -1,8 +1,8 @@
 [main]
 host = https://www.transifex.com
 
-[knitkode-check.pwpch]
+[knitkode-check.kkch]
 file_filter = build/languages/<lang>.po
-source_file = build/languages/pwpch.pot
+source_file = build/languages/kkch.pot
 source_lang = en
 type = PO

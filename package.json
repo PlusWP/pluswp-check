@@ -1,16 +1,16 @@
 {
   "name": "knitkode-check",
   "version": "0.0.1",
-  "description": "Check Knitkode products compatibility with your current WordPress setup.",
+  "description": "Check KnitKode products compatibility with your current WordPress setup.",
   "config": {
-    "namePretty": "Knitkode Check",
-    "nameShort": "PWPch",
-    "textDomain": "pwpch",
+    "namePretty": "KnitKode Check",
+    "nameShort": "KKch",
+    "textDomain": "kkch",
     "startYear": 2015
   },
   "homepage": "https://knitkode.com/knitkode-check",
   "author": {
-    "name": "Knitkode",
+    "name": "KnitKode",
     "email": "dev@knitkode.com",
     "url": "https://knitkode.com/"
   },

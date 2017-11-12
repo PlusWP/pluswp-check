@@ -1,18 +1,18 @@
 <?php defined( 'ABSPATH' ) or die;
 
 /**
- * Knitkode Check
+ * KnitKode Check
  *
  * pkgDescription
  *
- * @package           PWP_Check
+ * @package           KK_Check
  *
  * @wordpress-plugin
- * Plugin Name:       Knitkode Check
+ * Plugin Name:       KnitKode Check
  * Plugin URI:        https://knitkode.com/check
  * Description:       pkgDescription
  * Version:           pkgVersion
- * Author:            Knitkode
+ * Author:            KnitKode
  * Author URI:        https://knitkode.com
  * License:           GPLv2 or later (license.txt)
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
@@ -20,23 +20,23 @@
  * Domain Path:       /languages
  */
 
-define( 'PWPch_PLUGIN_FILE', __FILE__ );
-define( 'PWPch_PLUGIN_VERSION', '0.0.1' );
-define( 'PWPch_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'PWPch_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+define( 'KKch_PLUGIN_FILE', __FILE__ );
+define( 'KKch_PLUGIN_VERSION', '0.0.1' );
+define( 'KKch_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( 'KKch_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 
 /**
  * Short description for class
  *
- * @package    PWP_Check
- * @author     Knitkode <dev@knitkode.com> (https://knitkode.com)
- * @copyright  2017 Knitkode
+ * @package    KK_Check
+ * @author     KnitKode <dev@knitkode.com> (https://knitkode.com)
+ * @copyright  2017 KnitKode
  * @license    GPL-2.0+
  * @version    Release: pkgVersion
  * @link       https://knitkode.com/customize-plus
  */
-final class PWP_Check {
+final class KK_Check {
 
 	/**
 	 * Minimum php version supported
@@ -104,8 +104,8 @@ final class PWP_Check {
 
 		add_action( 'plugins_loaded', array( __CLASS__, 'init' ) );
 
-		register_activation_hook( PWPch_PLUGIN_FILE, array( __CLASS__, 'activation' ) );
-		register_activation_hook( PWPch_PLUGIN_FILE, array( __CLASS__, 'deactivation' ) );
+		register_activation_hook( KKch_PLUGIN_FILE, array( __CLASS__, 'activation' ) );
+		register_activation_hook( KKch_PLUGIN_FILE, array( __CLASS__, 'deactivation' ) );
 	}
 
 	/**
@@ -120,7 +120,7 @@ final class PWP_Check {
 
 		// Make plugin available for translation
 		load_textdomain( 'pkgTextDomain', WP_LANG_DIR . '/knitkode-check/pkgTextDomain-' . $locale . '.mo' );
-		load_plugin_textdomain( 'pkgTextDomain', false, dirname( plugin_basename( PWPch_PLUGIN_FILE ) ) . '/languages/' );
+		load_plugin_textdomain( 'pkgTextDomain', false, dirname( plugin_basename( KKch_PLUGIN_FILE ) ) . '/languages/' );
 	}
 
 	/**
@@ -132,7 +132,7 @@ final class PWP_Check {
 	 */
 	public static function meta_links( $links, $file ) {
 		// Check plugin
-		if ( $file === plugin_basename( PWPch_PLUGIN_FILE ) ) {
+		if ( $file === plugin_basename( KKch_PLUGIN_FILE ) ) {
 			unset( $links[2] );
 			$links[] = '<a href="pkgHomepage" target="_blank">' . __( 'Project homepage' ) . '</a>';
 		}
@@ -145,7 +145,7 @@ final class PWP_Check {
 	 * @since  0.0.1
 	 */
 	public static function activation() {
-		do_action( 'PWPch/activation' );
+		do_action( 'KKch/activation' );
 	}
 
 	/**
@@ -154,7 +154,7 @@ final class PWP_Check {
 	 * @since  0.0.1
 	 */
 	public static function deactivation() {
-		do_action( 'PWPch/deactivation' );
+		do_action( 'KKch/deactivation' );
 	}
 
 	/**
@@ -174,7 +174,7 @@ final class PWP_Check {
 			$error_msg = sprintf( __( 'WordPress version %1$s currently installed is too low, %2$s is required.' ), $current_version, $min_version );
 		}
 
-		load_plugin_textdomain( 'pkgTextDomain', false, dirname( plugin_basename( PWPch_PLUGIN_FILE ) ), '/languages/' );
+		load_plugin_textdomain( 'pkgTextDomain', false, dirname( plugin_basename( KKch_PLUGIN_FILE ) ), '/languages/' );
 
 		// WordPress version is too low
 		if ( version_compare( $min_version, $current_version, '>' ) ) {
@@ -257,18 +257,18 @@ final class PWP_Check {
 	 */
 	public static function show_notice() {
 		?>
-		<div class="updated pwpch">
-			<img src="<?php echo PWPch_PLUGIN_URL . 'logo.png'; ?>" alt="Knitkode logo" width="65" height="65">
-			<h2 class="pwpch-title">
+		<div class="updated kkch">
+			<img src="<?php echo KKch_PLUGIN_URL . 'logo.png'; ?>" alt="KnitKode logo" width="65" height="65">
+			<h2 class="kkch-title">
 				<?php
 					/* translators: %s: plugin name */
-					esc_attr_e( sprintf( __( '%s report' ), 'Knitkode Check' ) );
+					esc_attr_e( sprintf( __( '%s report' ), 'KnitKode Check' ) );
 				?>
 			</h2>
-			<h3 class="pwpch-desc">
+			<h3 class="kkch-desc">
 				<?php
 					/* translators: %s: plugin name */
-					esc_attr_e( sprintf( __( 'Listed here are all %s products with information about the compatibility of each product with your current WordPress and server configuration.' ), 'Knitkode' ) );
+					esc_attr_e( sprintf( __( 'Listed here are all %s products with information about the compatibility of each product with your current WordPress and server configuration.' ), 'KnitKode' ) );
 				?>
 			</h3>
 			<?php
@@ -317,8 +317,8 @@ final class PWP_Check {
 						$result = array( 'icon' => 'yes', 'text' => __( 'Fully compatible' ) );
 					}
 
-					$output .= '<h4 class="pwpch-name">
-						<i class="pwpch-symbol dashicons dashicons-' . $result['icon'] . '"></i> ' . $args['name'] . ' <small>(' . $args['type'] . ' ) | <a href="' . $args['uri'] . '" target="_blank">' . __( 'Details' ) . '<i class="dashicons dashicons-external"></i></a> | <em>' . $result['text'] . '</em></small>
+					$output .= '<h4 class="kkch-name">
+						<i class="kkch-symbol dashicons dashicons-' . $result['icon'] . '"></i> ' . $args['name'] . ' <small>(' . $args['type'] . ' ) | <a href="' . $args['uri'] . '" target="_blank">' . __( 'Details' ) . '<i class="dashicons dashicons-external"></i></a> | <em>' . $result['text'] . '</em></small>
 					</h4>';
 
 					$output .= $output_messages;
@@ -326,7 +326,7 @@ final class PWP_Check {
 
 				if ( current_user_can( 'delete_plugins' ) ) {
 					/* translators: %s: plugin name */
-					$output .= '<a href="' . wp_nonce_url( 'plugins.php?action=deactivate&amp;plugin=' . $plugin_file . '&amp;plugin_status=' . $context . '&amp;paged=' . $page . '&amp;s=' . $s . '#knitkode-check', 'deactivate-plugin_' . $plugin_file ) . '" class="button button-primary" aria-label="' . esc_attr( sprintf( __( 'Deactivate %s' ), 'Knitkode Check' ) ) . '">' . esc_attr( sprintf( __( 'Deactivate %s now' ), 'Knitkode Check' ) ) . '</a>';
+					$output .= '<a href="' . wp_nonce_url( 'plugins.php?action=deactivate&amp;plugin=' . $plugin_file . '&amp;plugin_status=' . $context . '&amp;paged=' . $page . '&amp;s=' . $s . '#knitkode-check', 'deactivate-plugin_' . $plugin_file ) . '" class="button button-primary" aria-label="' . esc_attr( sprintf( __( 'Deactivate %s' ), 'KnitKode Check' ) ) . '">' . esc_attr( sprintf( __( 'Deactivate %s now' ), 'KnitKode Check' ) ) . '</a>';
 				}
 				echo $output;
 			?>
@@ -343,31 +343,31 @@ final class PWP_Check {
 			.plugins-php #message {
 				display: none;
 			}
-			.pwpch.updated {
+			.kkch.updated {
 				padding: 30px;
 				border-color: #464646;
 			}
 			@media screen and (max-width: 782px) {
-				.wrap .pwpch.updated {
+				.wrap .kkch.updated {
 					padding: 20px;
 				}
 			}
-			.pwpch img {
+			.kkch img {
 				float: left;
 				margin: 0 20px 30px 0;
 			}
-			.wrap .pwpch-title {
+			.wrap .kkch-title {
 				font-size: 30px;
 				font-weight: 100;
 				margin: 0;
 				padding: 0;
 			}
-			.pwpch .pwpch-desc {
+			.kkch .kkch-desc {
 				font-size: 16px;
 				font-weight: 100;
 				clear: none;
 			}
-			.pwpch .pwpch-name {
+			.kkch .kkch-name {
 				margin: 20px 0 5px;
 				font-size: 16px;
 				clear: both;
@@ -375,10 +375,10 @@ final class PWP_Check {
 				padding: 6px;
 				border-radius: 3px;
 			}
-			.pwpch-name small {
+			.kkch-name small {
 				font-weight: 100;
 			}
-			.pwpch-symbol.dashicons {
+			.kkch-symbol.dashicons {
 				display: inline-block;
 				width: 12px;
 				height: 12px;
@@ -391,35 +391,35 @@ final class PWP_Check {
 				opacity: .7;
 				color: #fff;
 			}
-			.pwpch-name a {
+			.kkch-name a {
 				font-weight: bold;
 			}
-			.pwpch-name a .dashicons {
+			.kkch-name a .dashicons {
 				padding-left: 3px;
 				font-size: 19px;
 			}
-			.pwpch-symbol.dashicons-no {
+			.kkch-symbol.dashicons-no {
 				background: #dd3d36;
 			}
-			.pwpch p .dashicons {
+			.kkch p .dashicons {
 				color: #999;
 				margin-left: 20px;
 				font-size: 15px;
 				line-height: 19px;
 			}
-			.pwpch p:hover .dashicons {
+			.kkch p:hover .dashicons {
 				color: #dd3d36;
 			}
-			.pwpch-symbol.dashicons-yes.warning {
+			.kkch-symbol.dashicons-yes.warning {
 				background: #ffba00;
 			}
-			.pwpch p:hover .dashicons.warning {
+			.kkch p:hover .dashicons.warning {
 				color: #ffba00;
 			}
-			.pwpch-symbol.dashicons-yes {
+			.kkch-symbol.dashicons-yes {
 				background: #7ad03a;
 			}
-			.wp-core-ui .pwpch .button {
+			.wp-core-ui .kkch .button {
 				margin: 20px 0 0;
 				text-decoration: none !important;
 			}
@@ -429,4 +429,4 @@ final class PWP_Check {
 }
 
 // Instantiate
-new PWP_Check;
+new KK_Check;

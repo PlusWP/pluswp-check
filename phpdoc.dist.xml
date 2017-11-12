@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <phpdoc>
-    <title>Knitkode Check</title>
+    <title>KnitKode Check</title>
     <parser>
         <target>docs</target>
         <encoding>utf8</encoding>
