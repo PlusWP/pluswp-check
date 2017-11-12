@@ -47,7 +47,7 @@ final class PWP_Check {
 	public static $to_check = array(
 		'customize-plus' => array(
 			'name' => 'Customize Plus',
-			'uri' => 'https://knitkode.com/customize-plus/',
+			'uri' => 'https://knitkode.com/products/customize-plus/',
 			'type' => 'plugin',
 			'min_php_version' => '5.2.4',
 			'min_wp_version' => '4.3.0',
@@ -60,7 +60,7 @@ final class PWP_Check {
 		),
 		'customize-plus-premium' => array(
 			'name' => 'Customize Plus Premium',
-			'uri' => 'https://knitkode.com/customize-plus-premium/',
+			'uri' => 'https://knitkode.com/products/customize-plus-premium/',
 			'type' => 'plugin',
 			'min_php_version' => '5.2.4',
 			'min_wp_version' => '4.3.0',
@@ -72,9 +72,9 @@ final class PWP_Check {
 				),
 			),
 		),
-		'plus-bootstrap' => array(
-			'name' => 'Plus Bootstrap',
-			'uri' => 'https://knitkode.com/plus-bootstrap/',
+		'customize-plus-theme' => array(
+			'name' => 'Customize Plus Theme',
+			'uri' => 'https://knitkode.com/products/customize-plus-theme/',
 			'type' => 'theme',
 			'min_php_version' => '5.2.4',
 			'min_wp_version' => '4.3.0',
