@@ -2,9 +2,7 @@
 
 [![WordPress plugin](https://img.shields.io/wordpress/plugin/v/knitkode-check.svg)]()
 [![GitHub release](https://img.shields.io/github/release/knitkode/knitkode-check.svg)]()
-[![Build Status](https://scrutinizer-ci.com/g/knitkode/knitkode-check/badges/build.png?b=master)](https://scrutinizer-ci.com/g/knitkode/knitkode-check/build-status/master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/knitkode/knitkode-check/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/knitkode/knitkode-check/?branch=master)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a8466b456551405da21c28ee0e95efaa)](https://www.codacy.com/app/knitkode/knitkode-check?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=knitkode/knitkode-check&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3010f02365bd45b4b5b787258144506a)](https://www.codacy.com/app/knitkode/knitkode-check?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=knitkode/knitkode-check&amp;utm_campaign=Badge_Grade)
 [![devDependency Status](https://david-dm.org/knitkode/knitkode-check/dev-status.svg)](https://david-dm.org/knitkode/knitkode-check#info=devDependencies)
 
 > Check all the KnitKode products (both plugins and themes) against your current WordPress setup.
@@ -54,7 +52,7 @@ We use [Transifex](https://www.transifex.com) to manage translations. **Anyone**
 
 Donate
 ---------------
-[![Gratipay](https://img.shields.io/gratipay/knitkode.svg)](https://gratipay.com/knitkode)
+[![Gratipay](https://img.shields.io/gratipay/knitkode/shields.svg)](https://gratipay.com/knitkode)
 
 
 License
