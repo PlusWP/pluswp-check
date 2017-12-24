@@ -23,36 +23,34 @@ If you find an issue, please let us know [here](https://github.com/knitkode/knit
 
 Support
 ---------------
-This is a developer's portal and should **not** be used for support. Please visit the [support forums](https://knitkode.com/support).
+This is a developer's portal and should **not** be used for support but only for development. Please visit the [support page](https://knitkode.com/support) to see other options.
 
-Otherwise you can also try to see if someone is in our [chat room](https://gitter.im/knitkode/chat):
+You can also try to see if someone is in our [chat room](https://gitter.im/knitkode/knitkode-check):
 
-[![Gitter Chat](http://img.shields.io/badge/GITTER-JOIN%20CHAT-1DCE73.svg)](https://gitter.im/knitkode/chat)
+[![Gitter Chat](http://img.shields.io/badge/GITTER-JOIN%20CHAT-1DCE73.svg)](https://gitter.im/knitkode/knitkode-check)
 
 
 Contribute
 ---------------
-Anyone is welcome to contribute. Please read the [guidelines for contributing](https://github.com/knitkode/knitkode-check/blob/master/CONTRIBUTING.md) to this repository.
-
-There are various ways you can contribute:
+Anyone is welcome to contribute, there are various ways you can do it:
 
 1. Raise an [issue](https://github.com/knitkode/knitkode-check/issues) on GitHub
 2. Send a [Pull Request](https://help.github.com/articles/creating-a-pull-request/) with your bug fixes and/or new features
-3. Translate this project into [different languages](https://www.transifex.com/projects/p/knitkode-check/)
+3. Translate this project into [different languages](https://localise.biz/knitkode/knitkode-check)
 4. Provide feedback and suggestions on [enhancements](https://github.com/knitkode/knitkode-check/issues?direction=desc&labels=Enhancement&page=1&sort=created&state=open)
 
 
 Translations
 ---------------
 
-We use [Transifex](https://www.transifex.com) to manage translations. **Anyone** may [sign up](https://www.transifex.com/signup/) for free and contribute. If you know another language any little help is appreciated. Thank you!
+We use [Loco](https://wordpress.org/plugins/loco-translate) to manage translations. **Anyone** may [sign up](https://localise.biz/register) for free and contribute. If you know another language any little help is appreciated. You can also [drop us a line](mailto:dev@knitkode.com?subject=Translations). Thank you!
 
-[Check this project on Transifex](https://www.transifex.com/knitkode/knitkode-check/)
+[Check this project on Loco](https://localise.biz/knitkode/knitkode-check)
 
 
 Donate
 ---------------
-[![Gratipay](https://img.shields.io/gratipay/knitkode/shields.svg)](https://gratipay.com/knitkode)
+[![Liberapay](https://img.shields.io/liberapay/KnitKode/receives.svg)](https://liberapay.com/KnitKode/donate)
 
 
 License
