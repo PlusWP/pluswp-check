@@ -3,10 +3,13 @@
   "version": "0.0.1",
   "description": "Check KnitKode products compatibility with your current WordPress setup.",
   "config": {
-    "namePretty": "KnitKode Check",
-    "nameShort": "KKch",
-    "textDomain": "kkch",
-    "startYear": 2015
+    "slug": "knitkode-check",
+    "title": "KnitKode Check",
+    "textdomain": "kkch",
+    "startYear": 2015,
+    "paths": {
+      "wpAssets": "../ui/knitkode-check"
+    }
   },
   "homepage": "https://knitkode.com/knitkode-check",
   "author": {

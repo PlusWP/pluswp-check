@@ -16,7 +16,7 @@
  * Author URI:        https://knitkode.com
  * License:           GPLv2 or later (license.txt)
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       pkgTextDomain
+ * Text Domain:       pkgTextdomain
  * Domain Path:       /languages
  */
 
@@ -116,11 +116,11 @@ final class KK_Check {
 	 */
 	public static function init() {
 		// The "plugin_locale" filter is also used in load_plugin_textdomain()
-		$locale = apply_filters( 'plugin_locale', get_locale(), 'pkgTextDomain' );
+		$locale = apply_filters( 'plugin_locale', get_locale(), 'pkgTextdomain' );
 
 		// Make plugin available for translation
-		load_textdomain( 'pkgTextDomain', WP_LANG_DIR . '/knitkode-check/pkgTextDomain-' . $locale . '.mo' );
-		load_plugin_textdomain( 'pkgTextDomain', false, dirname( plugin_basename( KKch_PLUGIN_FILE ) ) . '/languages/' );
+		load_textdomain( 'pkgTextdomain', WP_LANG_DIR . '/knitkode-check/pkgTextdomain-' . $locale . '.mo' );
+		load_plugin_textdomain( 'pkgTextdomain', false, dirname( plugin_basename( KKch_PLUGIN_FILE ) ) . '/languages/' );
 	}
 
 	/**
@@ -174,7 +174,7 @@ final class KK_Check {
 			$error_msg = sprintf( __( 'WordPress version %1$s currently installed is too low, %2$s is required.' ), $current_version, $min_version );
 		}
 
-		load_plugin_textdomain( 'pkgTextDomain', false, dirname( plugin_basename( KKch_PLUGIN_FILE ) ), '/languages/' );
+		load_plugin_textdomain( 'pkgTextdomain', false, dirname( plugin_basename( KKch_PLUGIN_FILE ) ), '/languages/' );
 
 		// WordPress version is too low
 		if ( version_compare( $min_version, $current_version, '>' ) ) {
