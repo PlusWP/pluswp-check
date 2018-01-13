@@ -17,7 +17,7 @@ module.exports = function (grunt) {
     addtextdomain: {
       options: {
         textdomain: 'kkch',
-        updateDomains: ['pkgTextdomain']
+        updateDomains: ['kkch']
       },
       target: {
         files: {
@@ -33,7 +33,7 @@ module.exports = function (grunt) {
           type: 'wp-plugin',
           domainPath: 'languages',
           potFilename: 'kkch.pot',
-          mainFile: '.php',
+          mainFile: 'knitkode-check.php',
           cwd: 'build/',
           // include: [''], // no glob
           // exclude: [''], // no glob
