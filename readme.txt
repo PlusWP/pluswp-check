@@ -5,8 +5,8 @@ Stable tag: 1.0.0
 Requires at least: 4.3
 Tested up to: 4.9.1
 Requires PHP: 5.2.4
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Lists all KnitKode products with information about the compatibility of each product with your current WordPress and server configuration.
 

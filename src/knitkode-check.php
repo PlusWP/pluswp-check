@@ -14,34 +14,34 @@
  * Version:           pkgVersion
  * Author:            KnitKode
  * Author URI:        https://knitkode.com
- * License:           GPLv2 or later (license.txt)
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * License:           GPLv3
+ * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       pkgTextdomain
  * Domain Path:       /languages
  */
 
 define( 'KKch_PLUGIN_FILE', __FILE__ );
-define( 'KKch_PLUGIN_VERSION', '0.0.1' );
+define( 'KKch_PLUGIN_VERSION', '1.0.0' );
 define( 'KKch_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'KKch_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 
 /**
- * Short description for class
+ * KnitKode products compatibily checker
  *
  * @package    KK_Check
  * @author     KnitKode <dev@knitkode.com> (https://knitkode.com)
  * @copyright  2017 KnitKode
- * @license    GPL-2.0+
+ * @license    GPLv3
  * @version    Release: pkgVersion
  * @link       https://knitkode.com/customize-plus
  */
 final class KK_Check {
 
 	/**
-	 * Minimum php version supported
+	 * Things to checks divided by product slug
 	 *
-	 * @since 0.0.1
+	 * @since 1.0.0
 	 * @var array
 	 */
 	public static $to_check = array(
@@ -50,7 +50,7 @@ final class KK_Check {
 			'uri' => 'https://knitkode.com/products/customize-plus/',
 			'type' => 'plugin',
 			'min_php_version' => '5.2.4',
-			'min_wp_version' => '4.3.0',
+			'min_wp_version' => '4.9.1',
 			'incompatible_plugins' => array(
 				array(
 					'title' => 'Kirki Framework',
@@ -63,7 +63,7 @@ final class KK_Check {
 			'uri' => 'https://knitkode.com/products/customize-plus-premium/',
 			'type' => 'plugin',
 			'min_php_version' => '5.2.4',
-			'min_wp_version' => '4.3.0',
+			'min_wp_version' => '4.9.1',
 			'upload_dir_writable' => true,
 			'incompatible_plugins' => array(
 				array(
@@ -72,25 +72,33 @@ final class KK_Check {
 				),
 			),
 		),
-		'customize-plus-theme' => array(
-			'name' => 'Customize Plus Theme',
-			'uri' => 'https://knitkode.com/products/customize-plus-theme/',
-			'type' => 'theme',
+		'customize-plus-builder' => array(
+			'name' => 'Customize Plus Premium',
+			'uri' => 'https://knitkode.com/products/customize-plus-builder/',
+			'type' => 'plugin',
 			'min_php_version' => '5.2.4',
-			'min_wp_version' => '4.3.0',
-			'incompatible_plugins' => array(
-				array(
-					'title' => 'Kirki Framework',
-					'file' => 'kirki/kirki.php',
-				),
-			),
+			'min_wp_version' => '4.9.1',
+			'incompatible_plugins' => array(),
 		),
+		// 'customize-plus-theme' => array(
+		// 	'name' => 'Customize Plus Theme',
+		// 	'uri' => 'https://knitkode.com/products/customize-plus-theme/',
+		// 	'type' => 'theme',
+		// 	'min_php_version' => '5.2.4',
+		// 	'min_wp_version' => '4.9.1',
+		// 	'incompatible_plugins' => array(
+		// 		array(
+		// 			'title' => 'Kirki Framework',
+		// 			'file' => 'kirki/kirki.php',
+		// 		),
+		// 	),
+		// ),
 	);
 
 	/**
 	 * Constructor
 	 *
-	 * @since 0.0.1
+	 * @since 1.0.0
 	 */
 	public function __construct() {
 		// Translate plugin meta
@@ -253,7 +261,7 @@ final class KK_Check {
 	/**
 	 * Show admin notice report
 	 *
-	 * @since 0.0.1
+	 * @since 1.0.0
 	 */
 	public static function show_notice() {
 		?>
@@ -291,15 +299,17 @@ final class KK_Check {
 						$output_messages .= $icon_error . $php_error;
 					}
 
-					$plugin_msgs = self::check_incompatible_plugins( $args['incompatible_plugins'] );
-					foreach ( $plugin_msgs as $msg ) {
-						if ( $msg['type'] === 'error' ) {
-							$has_errors = true;
-							$output_messages .= '<p>' . $icon_error . $msg['text'] . '</p>';
-						}
-						if ( $msg['type'] === 'warning' ) {
-							$has_warnings = true;
-							$output_messages .= '<p>' . $icon_warning . $msg['text'] . '</p>';
+					if ( isset( $args['incompatible_plugins'] ) ) {
+						$plugin_msgs = self::check_incompatible_plugins( $args['incompatible_plugins'] );
+						foreach ( $plugin_msgs as $msg ) {
+							if ( $msg['type'] === 'error' ) {
+								$has_errors = true;
+								$output_messages .= '<p>' . $icon_error . $msg['text'] . '</p>';
+							}
+							if ( $msg['type'] === 'warning' ) {
+								$has_warnings = true;
+								$output_messages .= '<p>' . $icon_warning . $msg['text'] . '</p>';
+							}
 						}
 					}
 

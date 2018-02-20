@@ -1,6 +1,6 @@
 {
   "name": "knitkode-check",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Check KnitKode products compatibility with your current WordPress setup.",
   "config": {
     "slug": "knitkode-check",
@@ -17,7 +17,7 @@
     "email": "dev@knitkode.com",
     "url": "https://knitkode.com/"
   },
-  "license": "GPL-2.0+",
+  "license": "GPLv3",
   "private": true,
   "repository": {
     "url": "https://github.com/knitkode/knitkode-check"
