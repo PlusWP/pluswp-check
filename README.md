@@ -1,7 +1,7 @@
-# KnitKode Check [![by KnitKode](https://img.shields.io/badge/by-KnitKode-lightgrey.svg?style=social)]()
+# KnitKode Check [![by KnitKode](https://img.shields.io/badge/by-KnitKode-lightgrey.svg?style=social)](https://knitkode.com)
 
-[![WordPress plugin](https://img.shields.io/wordpress/plugin/v/knitkode-check.svg)]()
-[![GitHub release](https://img.shields.io/github/release/knitkode/knitkode-check.svg)]()
+[![WordPress plugin](https://img.shields.io/wordpress/plugin/v/knitkode-check.svg)](https://wordpress.org/plugins/knitkode-check)
+[![GitHub release](https://img.shields.io/github/release/knitkode/knitkode-check.svg)](https://github.com/knitkode/knitkode-check/releases/latest)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3010f02365bd45b4b5b787258144506a)](https://www.codacy.com/app/knitkode/knitkode-check?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=knitkode/knitkode-check&amp;utm_campaign=Badge_Grade)
 [![devDependency Status](https://david-dm.org/knitkode/knitkode-check/dev-status.svg)](https://david-dm.org/knitkode/knitkode-check#info=devDependencies)
 
@@ -59,4 +59,4 @@ License
 
 
 ---------------
-:registered: KnitKode 2017 | [knitkode.com](https://knitkode.com) | dev@knitkode.com
+:registered: KnitKode 2018 | [knitkode.com](https://knitkode.com) | dev@knitkode.com
