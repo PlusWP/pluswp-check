@@ -17,7 +17,7 @@
     "email": "dev@knitkode.com",
     "url": "https://knitkode.com/"
   },
-  "license": "GPLv3",
+  "license": "MIT",
   "private": true,
   "repository": {
     "url": "https://github.com/knitkode/knitkode-check"
